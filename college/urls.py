@@ -19,4 +19,5 @@ from college import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^(?P<college_id>[0-9]+)/$', views.detail, name='detail')    
 ]

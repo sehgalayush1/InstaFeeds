@@ -21,5 +21,4 @@ import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^college/', include('college.urls') ),
-    url(r'^(?P<path>.*)$','django.views.static.serve',{'document_root' : settings.MEDIA_ROOT })  
 ]
