@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import College
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the College List From Here Select a college to Go to Your Collge page")
+    college_list = College.objects.all()
+    context = {
+    	'college_list' : college_list
+    }
+    return render(request,'college/index.html',context)
