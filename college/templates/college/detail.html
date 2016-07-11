@@ -1,3 +1,8 @@
 <h1>  {{college.name}} </h1> </br>
-<h2>  {{college.details}} </h2>
-<a href = '{{college.link}}' > {{college.link}} </a>
+<h4>  {{college.details}} </h4>
+<a href = '{{college.link}}' > {{college.link}} </a></br>
+<ul>
+	 {% for society in college.society_set.all %}
+	 <li>{{society.name}}</li>
+	 {% endfor %}
+</ul>

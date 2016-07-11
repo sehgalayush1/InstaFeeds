@@ -1,0 +1,19 @@
+{% if society_list %}
+	<h2> Society List </h2> </br>
+	<ul>
+	{% for society in society_list %}
+
+	<li>
+		<a href="/society/{{society.id}}/">{{ society.name }} </a> </br>
+		{{society.details}}</br>	
+		{{society.link}}</br>
+		{{society.college_id}}
+	</li>
+
+	{% endfor %}
+	</ul>
+
+{% else %}
+	<p> No Society are available Sorry</p>
+
+{% endif %}	
